@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid } from '@mui/material'
 
 //component
-import Banner from '../../Banner/Banner'
+import Banner from '../Banner/Banner'
 import Categories from './Categories'
 import Posts from './post/Posts'
 

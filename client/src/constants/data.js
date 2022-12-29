@@ -1,6 +1,4 @@
 
-
-
 export const categories = [
     {id:1,type:'music'},
     {id:2,type:'movies'},

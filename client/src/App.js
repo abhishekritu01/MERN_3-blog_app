@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import Login from './components/account/Login'
-import DataProvider from './context/DataProvider'
-import Home from './components/Home/Home'
 
+import DataProvider from './context/DataProvider'
+
+import Login from './components/account/Login'
+import Home from './components/Home/Home'
 import Header from './components/Header/Header'
+import CreatePost from './components/create/CreatePost'
 
 
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom'
@@ -28,7 +30,7 @@ const App = () => {
   return (
     <DataProvider>
       <BrowserRouter>
-        
+
         <div style={{ marginTop: 70 }}>
           <Routes >
             <Route path='/login' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
@@ -36,6 +38,12 @@ const App = () => {
             <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
               <Route path='/' element={<Home />} />
             </Route>
+
+            <Route path='/create' element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+              <Route path='/create' element={<CreatePost />} />
+            </Route>
+
+
           </Routes>
         </div>
       </BrowserRouter>

@@ -66,7 +66,7 @@ const loginInitialValues = {
     password: '',
 }
 
-const Login = ({isUserAuthenticated}) => {
+const Login = ({ isUserAuthenticated }) => {
     const imageURL = 'https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png';
 
     const [account, toggleAccount] = useState('login')
@@ -77,11 +77,11 @@ const Login = ({isUserAuthenticated}) => {
 
     const { setAccount } = useContext(DataContext)
 
-    const navigate =useNavigate();
+    const navigate = useNavigate();
 
 
 
-    const toggleSignup = ({isUserAuthenticated}) => {
+    const toggleSignup = () => {
         account === 'signup' ? toggleAccount('login') : toggleAccount('signup');
     }
 
