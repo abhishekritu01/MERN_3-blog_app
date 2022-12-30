@@ -74,7 +74,6 @@ const Update = () => {
         fetchData();
     }, []);
 
-
     useEffect(() => {
         const getImage = async () => {
             if (file) {
