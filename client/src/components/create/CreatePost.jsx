@@ -51,7 +51,6 @@ const initialPost = {
 const CreatePost = () => {
 
   const location = useLocation();
-
   const navigate = useNavigate();
 
   const [post, setPost] = useState(initialPost);
@@ -81,9 +80,9 @@ const CreatePost = () => {
   }
 
   const savePost = async() => {
-    let response = API.createPost(post);
+    let response = await API.createPost(post);
     if(response.isSuccess){
-      navigate('/')
+      navigate('/');
     }
   }
 
